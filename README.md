@@ -1,5 +1,5 @@
 # Stream-server
-在windows上开启rtmp服务器
+在windows上开启本地rtmp服务器
 
 ## __简单来说，就是懒人福利__
 
