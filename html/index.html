@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>直播</title>
+    </head>
+    <body>
+        
+        <script src="./js/flv.js"></script>
+        <div>
+            <video id="videoElement" style="width: 80%;" controls="controls"></video>
+            <iframe src='https://hack.chat/?zhw8a3k6' style="position: absolute;height: 97%;"></iframe>
+        </div>
+        <script>
+            var orign = window.location.origin;
+            if (flvjs.isSupported()) {
+                var videoElement = document.getElementById('videoElement');
+                var flvPlayer = flvjs.createPlayer({
+                    type: 'flv',
+                    url: orign + '/live?app=live&stream=123'
+                });
+                flvPlayer.attachMediaElement(videoElement);
+                flvPlayer.load();
+                flvPlayer.play();
+            }
+        </script>
+    </body>
+</html>
